@@ -1,0 +1,130 @@
+/* .noteCard {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 250px;
+}
+
+.noteTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.noteContent {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.noteLabels {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 0.5rem 0.75rem;
+  background-color: #0070f3;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+.button:hover {
+  background-color: #0059c1;
+} */
+
+
+.noteCard {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem 1rem 1rem 1rem;  /* Extra top padding for labels */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  width: fit-content;
+  transition: box-shadow 0.3s ease;
+  height: fit-content;
+}
+
+.noteCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 112, 243, 0.3);
+}
+
+.noteTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+  color: #111;
+}
+
+.noteContent {
+  margin-bottom: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.noteLabels {
+  display: flex;
+  gap: 6px;
+  overflow: hidden;
+   border-radius: 10px;
+   padding: 0.1rem 1.2rem;
+   border: 1px solid #eee;
+   text-align: center;
+   background-color: #eee;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+
+.noteLabels span {
+  background-color: #0070f3;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;  /* capsule shape */
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 112, 243, 0.3);
+  user-select: none;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.noteLabels span:hover {
+  background-color: #0059c1;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 0.25rem 0rem;
+  background-color: #0070f3;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 60px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #0059c1;
+}
