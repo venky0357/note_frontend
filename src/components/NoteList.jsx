@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import NoteForm from "./NoteForm";
 import styles from "./NoteList.module.css";
+import './Notes.css';
 
 export default function NoteList({ notes, onUpdate, onDelete }) {
     const [editingId, setEditingId] = useState(null);
 
     return (
-        <div style={{ display: "flex", flexDirection: "row", gap: "10px", flexWrap: "wrap" }}>
+        <div style={{ gap: "10px",  }} className="notes-grid">
             {notes.map((note) =>
                 editingId === note._id ? (
                     <div>
