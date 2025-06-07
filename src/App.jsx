@@ -6,9 +6,11 @@ import noteService from "./services/noteService";
 function App() {
   const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isLoading,setisLoading]=useState(false);
   useEffect(() => {
+    setisLoading(true);
     noteService.getAll().then(setNotes);
+    setisLoading(false);
   }, []);
 
   const handleCreate = async (note) => {
@@ -105,7 +107,11 @@ function App() {
         </div>
       )}
 
-      {/* Main content wrapper - flex-grow to fill space */}
+      {isLoading?
+      <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"30vh"}}>
+        <p style={{fontWeight:"600",fontSize:20,}}>Loading...</p>
+      </div>
+      :
       <main
         style={{
           overflowY: "auto",
@@ -118,6 +124,7 @@ function App() {
       >
         <NoteList notes={notes} onUpdate={handleUpdate} onDelete={handleDelete} />
       </main>
+      }
 
       <footer
         className="footer py-2"
