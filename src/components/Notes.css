@@ -1,0 +1,32 @@
+.notes-grid {
+    display: grid;
+         grid-template-columns: repeat(5, 1fr);
+}
+
+/* Extra small devices (phones, 320px to 450px) */
+@media (max-width: 450px) and (min-width: 320px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small devices (phones in landscape / small tablets, 451px to 767px) */
+@media (min-width: 451px) and (max-width: 767px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium devices (tablets, 768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .notes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large devices (desktops, 1024px and above) */
+@media (min-width: 1024px) and (max-width:1399px) {
+    .notes-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
